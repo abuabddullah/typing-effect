@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #121212;
+    font-family: 'Crete Round', serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.typer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.typer .wraper{    
+    display: flex;
+}
+.typer .wraper .staticText{
+    font-size: 3em;
+    font-weight: bold;
+    word-spacing: .25em;
+    line-height: 1.5em;
+    white-space: nowrap;
+}
+.typer .wraper ul.dynamicText{
+    margin-left: 1.5em;
+    white-space: nowrap;
+}
+.typer .wraper ul.dynamicText li{
+    list-style: none;
+}
+.typer .wraper ul.dynamicText li span{
+    font-size: 3.5em;
+    font-weight: bold;
+    word-spacing: .25em;
+    color: rgb(255, 65, 65);
+}
+
+
+/* =========type effect============= */
+
+
+.typer .wraper ul.dynamicText{
+    /* border: 1px solid rgb(255, 65, 65); */
+    border-right: 6px solid rgb(255, 65, 65);
+    height: 4.5em;
+    animation: typingEffect 2s steps(13) 0s infinite alternate;
+    /* animation-play-state: paused; */
+    overflow: hidden;
+}
+@keyframes typingEffect {
+    0%{
+        width: 0;
+    }
+    90%,
+    100%{
+        width: 100%;
+    }
+}
+
+
+/* ================slide Effect================= */
+
+.typer .wraper ul.dynamicText li{
+    position: relative;
+    top: 0;
+    animation: slideUp 12s steps(3) 0s infinite;
+    
+}
+@keyframes slideUp {
+    
+    100%{
+        top: -14em;
+    }
+}
+
